@@ -92,6 +92,10 @@ void constdb2doc_constdb(void)
 	fprintf(out_fp, "## Hardcoded Constants (source)\n\n");
 	script->hardcoded_constants();
 	fprintf(out_fp, "\n");
+	
+	fprintf(out_fp, "## Hardcoded Parameters Constants (source)\n\n");
+	script->load_parameters();
+	fprintf(out_fp, "\n");
 
 	/* Unlink */
 	script->set_constant = script_set_constant;
